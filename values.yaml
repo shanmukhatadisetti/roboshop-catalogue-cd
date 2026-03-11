@@ -1,3 +1,3 @@
 statefulset:
-  url: shanmukhatadisetti/mongodb
+  url: shanmukhatadisetti/catalogue
   imageversion: IMAGE_VERSION
