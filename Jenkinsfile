@@ -26,8 +26,8 @@ pipeline{
                            kubectl get nodes
                            kubectl apply -f namespace.yaml
                            sed -i "s/IMAGE_VERSION/${params.appVersion}/g" values.yaml
-                           sh 'pwd'
-                           sh 'ls -l'
+                           pwd
+                           ls -l
                            helm upgrade --install ${COMPONENT} -f values.yaml -n roboshop .
                         """
                     }
