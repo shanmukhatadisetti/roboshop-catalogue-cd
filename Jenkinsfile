@@ -23,7 +23,7 @@ pipeline{
                      withAWS(credentials: 'aws-cred', region: 'us-east-1') {
                         sh """
                            aws eks update-kubeconfig --region ${REGION} --name ${PROJECT}
-                           kubectl get 
+                           kubectl get nodes
                            sed -i "s/IMAGE_VERSION/${params.appVersion}/g" values.yaml
                            helm upgrade --install ${COMPONENT} .
                         """
